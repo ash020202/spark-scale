@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  overflow-x: hidden;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+* {
+  font-family: "Josefin Sans", sans-serif;
+}
+*:hover,
+*:focus {
+  outline: none;
+}
+.box-shadow {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.slide-in {
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.slide-out {
+  animation: slideOut 0.5s ease-in-out;
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease;
+}
+
+.fade-in-delay {
+  animation: fadeIn 0.8s ease;
+}
+
+.fade-in-delay-2 {
+  animation: fadeIn 1s ease;
+}
+
+.fade-in-delay-3 {
+  animation: fadeIn 1.5 ease;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 45px;
+  aspect-ratio: 0.8;
+  --c: no-repeat repeating-linear-gradient(90deg, #000 0 20%, #0000 0 40%);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 100% 21%;
+  animation: l24 0.75s infinite alternate;
+}
+@keyframes l24 {
+  0%,
+  10% {
+    background-position: 0 calc(0 * 100% / 4), 0 calc(1 * 100% / 4),
+      0 calc(2 * 100% / 4), 0 calc(3 * 100% / 4);
+  }
+  25% {
+    background-position: 0 calc(0 * 100% / 4), 0 calc(1 * 100% / 4),
+      0 calc(2 * 100% / 4), 0 calc(4 * 100% / 4);
+  }
+  50% {
+    background-position: 0 calc(0 * 100% / 4), 0 calc(1 * 100% / 4),
+      0 calc(3 * 100% / 4), 0 calc(4 * 100% / 4);
+  }
+  75% {
+    background-position: 0 calc(0 * 100% / 4), 0 calc(2 * 100% / 4),
+      0 calc(3 * 100% / 4), 0 calc(4 * 100% / 4);
+  }
+  90%,
+  100% {
+    background-position: 0 calc(1 * 100% / 4), 0 calc(2 * 100% / 4),
+      0 calc(3 * 100% / 4), 0 calc(4 * 100% / 4);
+  }
+}
