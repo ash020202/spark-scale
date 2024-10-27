@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect } from "react";
-import { BackgroundBeams } from "./BackgroundBeams";
 import Generate from "./Generate";
 import { useNavigate } from "react-router-dom";
 
@@ -25,7 +24,6 @@ export function BackgroundBeamsDemo() {
         Spark Your Idea. Scale Your Business.
       </p>
       <Generate />
-      <BackgroundBeams />
     </div>
   );
 }

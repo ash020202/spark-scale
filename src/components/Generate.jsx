@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import { fetchRoadmapAndAnalysis } from "../api/getApi";
 const Generate = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
 const Loader = () => {
   const messages = [
@@ -31,18 +30,12 @@ const Loader = () => {
     <div className="flex flex-col justify-center items-center h-screen space-y-14">
       <div className="loader"></div>
 
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={currentIndex}
-          initial={{ x: -20, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          exit={{ x: 20, opacity: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-gray-400 text-[14px] font-bold text-justify uppercase"
-        >
-          {messages[currentIndex]}
-        </motion.div>
-      </AnimatePresence>
+      <div
+        key={currentIndex}
+        className="text-gray-400 text-[14px] font-bold text-justify uppercase animate"
+      >
+        {messages[currentIndex]}
+      </div>
     </div>
   );
 };

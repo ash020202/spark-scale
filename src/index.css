@@ -108,3 +108,53 @@ body {
       0 calc(3 * 100% / 4), 0 calc(4 * 100% / 4);
   }
 }
+
+/* Fade-in and slide-in animation */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Fade-out and slide-out animation */
+@keyframes fadeSlideOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+}
+
+/* Animate the text on change */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeSlideOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+}
+
+.animate {
+  animation: fadeSlideIn 0.5s forwards, fadeSlideOut 0.5s 2.5s forwards;
+}
