@@ -17,7 +17,7 @@ export function BackgroundBeamsDemo() {
     }
   }, []);
   return (
-    <div className="h-[100dvh] w-full p-4 rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
+    <div className="h-[100dvh] w-full p-4  bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
       <p className="md:text-4xl text-3xl font-bold capitalize mb-6 z-20 text-white fade-in-delay">
         SparkScale
       </p>
